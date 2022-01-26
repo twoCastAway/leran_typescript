@@ -26,8 +26,18 @@ const apple = {
     category: FoodCategory.FRUITS
 };
 // console.log(FoodCategory[0]);
-// console.log(apple);
+// console.log(apple.category);
 let address = '';
 address = '東京都港区芝' + 1 + '丁目';
-console.log(address);
+// console.log(address)
+let object1 = {
+    add: function (val1, val2) {
+        console.log(this.value + val1 + val2);
+    }
+};
+let object2 = {
+    value: 3
+};
+const apply = object1.add.apply(object2, [1, 2]);
+const call = object1.add.call(object2, 1, 2);
 //# sourceMappingURL=index.js.map
